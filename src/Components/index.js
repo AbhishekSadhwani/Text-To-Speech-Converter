@@ -1,5 +1,3 @@
 export {Header} from "./Header";
 
-export {Input} from "./Input";
-
-export {Play} from "./Play";
+export {Console} from "./Console";
