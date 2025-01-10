@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { VoiceOption } from './Controls/VoiceOption';
-import { Volume2, VolumeOff } from 'lucide-react';
-import Button from './Controls/Button';
+import { Pause, Play, RotateCcw, Square, Volume2, VolumeOff } from 'lucide-react';
 
 export const Console = () => {
     const [text, setText] = useState("");
@@ -92,6 +91,7 @@ export const Console = () => {
         speechSynthesis.cancel();
         setText("");
         setIsPlaying(false);
+        setIsPaused(false);
     };
 
     return (
@@ -117,10 +117,33 @@ export const Console = () => {
                     </div>
                 </div>
                 <div className='flex flex-wrap justify-center gap-5 p-10'>
-                    <Button func={handlePlay} buttonText="Play" className="bg-blue-400" text={text} isPlaying={isPlaying}/>
+                    <button 
+                        onClick={handlePlay} 
+                        className="flex items-center justify-center gap-2 text-xl text-white w-32 p-2 rounded-xl disabled:cursor-not-allowed disabled:opacity-50 bg-blue-400" 
+                        disabled={isPlaying || text.trim() === ''}
+                        >
+                            {isPaused ? <RotateCcw /> : <Play />}
+                            {isPaused ? "Restart" : "Play"}
+                    </button>
 
-                    {isPaused ? <Button func={handlePause} buttonText="Resume" className="bg-orange-400" text={text} />  : <Button func={handlePause} buttonText="Pause" className="bg-yellow-400" text={text} />}
-                    <Button func={handleReset} buttonText="Reset" className="bg-red-400" text={text} /> 
+                    <button 
+                        onClick={handlePause} 
+                        className="flex items-center justify-center gap-2 text-xl text-white w-32 p-2 rounded-xl disabled:cursor-not-allowed disabled:opacity-50 bg-yellow-400" 
+                        disabled={!isPlaying && !isPaused}
+                        >
+                            {isPaused ? <Play /> : <Pause />}
+                            {isPaused ? "Resume" : "Pause"}
+
+
+                    </button>
+                    <button 
+                        onClick={handleReset} 
+                        className="flex items-center justify-center gap-2 text-xl text-white w-32 p-2 rounded-xl disabled:cursor-not-allowed disabled:opacity-50 bg-red-400" 
+                        disabled={text.trim() === ''}
+                        >
+                            <Square /> Reset
+                    </button>
+
                 </div>
             </div>
         </div>
