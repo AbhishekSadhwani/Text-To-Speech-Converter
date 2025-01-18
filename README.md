@@ -36,22 +36,23 @@ Here’s a preview of the application:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/text-to-speech-converter.git
+   ```
 
 2. Navigate to the project directory:
 
-```bash
-cd text-to-speech-converter
-```
+  ```bash
+  cd text-to-speech-converter
+  ```
 3. Install dependencies:
 
-```bash
-npm install
-```
+  ```bash
+  npm install
+  ```
 4. Start the development server:
 
-```bash
-npm start
-```
+  ```bash
+  npm start
+  ```
 
 ##👨‍💻 Usage
 Open the application in your browser.
