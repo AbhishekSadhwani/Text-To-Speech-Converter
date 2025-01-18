@@ -34,28 +34,26 @@ Here’s a preview of the application:
 ## 🚀 Installation
 
 1. Clone the repository:
-   ```bash
+    ```bash
    git clone https://github.com/your-username/text-to-speech-converter.git
    ```
-
 2. Navigate to the project directory:
-
-  ```bash
-  cd text-to-speech-converter
-  ```
+   ```bash
+    cd text-to-speech-converter
+   ```
 3. Install dependencies:
-
-  ```bash
-  npm install
-  ```
+   ```bash
+    npm install
+   ```
+ 
 4. Start the development server:
+   ```bash
+    npm start
+   ```
 
-  ```bash
-  npm start
-  ```
+## 👨‍💻 Usage
 
-##👨‍💻 Usage
-Open the application in your browser.
-Enter some text in the input box.
-Select a voice from the dropdown.
-Hit the play button to hear the speech.
+- Open the application in your browser.
+- Enter some text in the input box.
+- Select a voice from the dropdown.
+- Hit the play button to hear the speech.
