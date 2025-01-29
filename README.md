@@ -25,11 +25,6 @@ This project was built using the following technologies:
 - **[TailwindCSS](https://tailwindcss.com/)** – A utility-first CSS framework for rapid UI development.
 - **Windows Speech Synthesis** – Browser's native API to generate speech from text.
 
-## 📸 Project Screenshots
-
-Here’s a preview of the application:
-
-![Text-to-Speech Converter](./assets/screenshot.png) *(Add your project screenshot here)*
 
 ## 🚀 Installation
 
